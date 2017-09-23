@@ -1,0 +1,7 @@
+<h1>Upcoming Concerts</h1>
+<ul>
+<% @concerts.each do |concert| %>
+  <a href="/concerts/<%=concert.id%>"><li><%= concert.band %></a></li>
+  <%= concert.venue %> on <%= concert.date %> at <%=concert.start_time %>
+<% end %>
+</ul>
