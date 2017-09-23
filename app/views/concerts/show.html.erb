@@ -1,3 +1,6 @@
+<% if @user %>
+Welcome back, <%= @user.first_name %>!
+<% end %>
 <h1><%=@concert.band%></h1>
 <p>Where: <%= @concert.venue %></p>
 <p>When: <%= @concert.start_time %></p>

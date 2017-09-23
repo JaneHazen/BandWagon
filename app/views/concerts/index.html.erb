@@ -1,3 +1,6 @@
+<% if @user %>
+Welcome back, <%= @user.first_name %>!
+<% end %>
 <h1>Upcoming Concerts</h1>
 <ul>
 <% @concerts.each do |concert| %>
