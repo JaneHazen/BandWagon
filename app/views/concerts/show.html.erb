@@ -1,7 +1,17 @@
-<% if @user %>
-Welcome back, <%= @user.first_name %>!
+<% if logged_in? %>
+Welcome back, <%= @current_user.first_name %>!
 <% end %>
 <h1><%=@concert.band%></h1>
 <p>Where: <%= @concert.venue %></p>
 <p>When: <%= @concert.start_time %></p>
 <p>Date: <%= @concert.date %></p>
+
+<% if logged_in? %>
+
+Attending:
+<ul>
+<%= @concert.attendees.each do |person| %>!
+  <li><%= person.first_name%> <%= person.last_name %> </li>
+<% end %>
+</ul>
+<%end %>
