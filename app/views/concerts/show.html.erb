@@ -26,6 +26,9 @@ Welcome back, <%= @current_user.first_name %>!
       <%end %>
     <% end %>
   </ul>
+  <% if @concert.attendees.exclude? @current_user %>
+   <%= render 'shared/new', locals: {attendance: @attendance}, remote: true, layout: false %>
+   <% end %>
 
 <%else %>
   Attending:
@@ -39,5 +42,5 @@ Welcome back, <%= @current_user.first_name %>!
     </ul>
 <%end %>
 
- <%= render 'shared/new', locals: {attendance: @attendance}, remote: true, layout: false %>
+
 

@@ -5,6 +5,7 @@ class AttendancesController < ApplicationController
 
   def create
     @attendance = Attendance.new(attendance_params)
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
     if @attendance.save
       respond_to do |format|
         format.html {redirect_to concert_path(@attendance.concert_id)}

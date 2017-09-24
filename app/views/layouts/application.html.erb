@@ -3,6 +3,8 @@
   <head>
     <title>Phase3Assessment</title>
     <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,700;" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
@@ -10,16 +12,32 @@
 
   <body>
   <% if logged_in? %>
-  <nav class="fixed-navbar">
-    <%= link_to "logout", session_path(current_user), :class => 'nav-bar', method: :delete %>
-    <%= link_to "home", root_path, :class => 'nav-bar' %>
+  <nav class="nav-main">
+    <div class="ogol">BandWagon</div>
+      <ul>
+        <li class="nav-item">
+        <%= link_to "home", root_path, :class => 'nav-bar' %>
+        </li>
+        <li class="nav-item">
+        <%= link_to "logout", session_path(current_user), :class => 'nav-bar', method: :delete %>
+        </li>
+        </ul>
   </nav>
   <% else %>
-    <nav class="fixed-navbar">
-    <%= link_to "login", new_session_path, :class => 'nav-bar' %>
-    <%= link_to "register", new_user_path, :class => 'nav-bar' %>
-    <%= link_to "home", root_path, :class => 'nav-bar' %>
-  </nav>
+    <nav class="nav-main">
+      <div class="ogol">BandWagon</div>
+        <ul>
+          <li class="nav-item">
+            <%= link_to "home", root_path, :class => 'nav-bar' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "register", new_user_path, :class => 'nav-bar' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "login", new_session_path, :class => 'nav-bar' %>
+          </li>
+        </ul>
+    </nav>
   <% end %>
 
     <%= yield %>

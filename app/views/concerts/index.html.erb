@@ -1,10 +1,20 @@
-<% if @user %>
-Welcome back, <%= @user.first_name %>!
-<% end %>
-<h1>Upcoming Concerts</h1>
-<ul>
+<header class="main-header logo" id="home-img">
+<h1>Join the BandWagon</h1>
+
+</header>
+
+
+
+
 <% @concerts.each do |concert| %>
-  <a href="/concerts/<%=concert.id%>"><li><%= concert.band %></a></li>
-  <%= concert.venue %> on <%= concert.date %> at <%=concert.start_time %>
+
+  <figure class="snip1585">
+  <img src="/assets/soundboard.jpg" alt="sample70" /></a>
+    <figcaption>
+        <h3><%= concert.band %><span><%= concert.venue %> on <%= concert.date.strftime("%B %e") %> at <%=concert.start_time %></span></h3>
+    </figcaption>
+  <a href="/concerts/<%=concert.id%>"></a>
+  </figure>
 <% end %>
-</ul>
+
+
