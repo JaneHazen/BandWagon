@@ -6,40 +6,59 @@
 </ul>
 <%end %>
 
-<% if logged_in? %>
-Welcome back, <%= @current_user.first_name %>!
-<% end %>
+<div class="elegantshadow">
 <h1><%=@concert.band%></h1>
-<p>Where: <%= @concert.venue %></p>
-<p>When: <%= @concert.start_time %></p>
-<p>Date: <%= @concert.date %></p>
+</div>
+
+
+<div class="info">
+    <h3><%=@concert.date.strftime("%B %e") %></h3>
+    <p>Where: <%= @concert.venue %></p>
+    <p>When: <%= @concert.start_time %></p>
+
+</div>
 
 <% if logged_in? %>
 
-  Attending:
-  <ul>
-    <%= @concert.attendees.each do |person| %>
-      <% if person.id == current_user.id %>
-        <li><strong><%= person.first_name%> <%= person.last_name %> </strong></li>
-      <%else %>
-        <li><%= person.first_name%> <%= person.last_name %> </li>
-      <%end %>
-    <% end %>
-  </ul>
-  <% if @concert.attendees.exclude? @current_user %>
-   <%= render 'shared/new', locals: {attendance: @attendance}, remote: true, layout: false %>
-   <% end %>
+<div class="text">
+  <h3>Attending:</h3>
 
-<%else %>
-  Attending:
+  <% if @concert.attendees.any? %>
     <ul>
-    <%= @concert.attendees.each do |person| %>
+      <%= @concert.attendees.each do |person| %>
+        <% if person.id == current_user.id %>
+          <li><strong><%= person.first_name%> <%= person.last_name %> </strong></li>
+        <%else %>
+          <li><%= person.first_name%> <%= person.last_name %> </li>
+        <%end %>
+      <% end %>
+    </ul>
+  <%else %>
+    <p>Join the BandWagon!</p>
+  <%end %>
+</div>
+    <% if @concert.attendees.exclude? @current_user %>
+     <%= render 'shared/new', locals: {attendance: @attendance}, remote: true, layout: false %>
+     <% end %>
+<% else %>
+
+
+<div class="text">
+  <h3>Attending:</h3>
+    <% if @concert.attendees.any? %>
+      <ul>
+      <%= @concert.attendees.each do |person| %>
+
+          <li><%= person.first_name%> <%= person.last_name %> </li>
 
         <li><%= person.first_name%> <%= person.last_name %> </li>
+      <% end %>
+      </ul>
+    <% else %>
+      <p> Sign in and join the BandWagon!</p>
+    <%end %>
+</div>
 
-      <li><%= person.first_name%> <%= person.last_name %> </li>
-    <% end %>
-    </ul>
 <%end %>
 
 

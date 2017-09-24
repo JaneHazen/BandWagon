@@ -1,23 +1,26 @@
-<% if @errors %>
-<ul>
-<% @errors.each do |error| %>
-  <li><%= error %></li>
-<% end %>
-</ul>
-<%end %>
+<div class="container">
+  <% if @errors %>
+  <ul>
+  <% @errors.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <%end %>
 
+<div class="login">
+  <%= form_for @user, url: {action: "create"} do |form| %>
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %> <br>
 
-<%= form_for @user, url: {action: "create"} do |form| %>
-  <%= form.label :first_name %>
-  <%= form.text_field :first_name %> <br>
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %><br>
 
-  <%= form.label :last_name %>
-  <%= form.text_field :last_name %><br>
+    <%= form.label :email %>
+    <%= form.text_field :email %><br>
 
-  <%= form.label :email %>
-  <%= form.text_field :email %><br>
-
-  <%= form.label :password %>
-  <%= form.text_field :password %><br>
-  <%= form.submit %>
-<% end %>
+    <%= form.label :password %>
+    <%= form.text_field :password %><br>
+    <div class="btn btn-primary btn-block btn-large"><%= form.submit %> </div>
+  <% end %>
+<end>
+</div>

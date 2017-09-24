@@ -38,12 +38,14 @@
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   margin: 8px;
+  height: 300px;
   max-width: 315px;
-  min-width: 230px;
+  min-width: 315px;
   overflow: hidden;
   position: relative;
   text-align: center;
   width: 100%;
+  margin-left: 8%;
 }
 
 .snip1585 * {
@@ -146,6 +148,8 @@
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
+
+
 
 
 

@@ -1,5 +1,5 @@
 <header class="main-header logo" id="home-img">
-<h1><%= @concerts.first.image %> Join the BandWagon</h1>
+<h1>Join the BandWagon</h1>
 
 </header>
 
@@ -9,7 +9,7 @@
 <% @concerts.each do |concert| %>
 
   <figure class="snip1585">
-  <img src="/assets/soundboard.jpeg">
+  <img src=<%= concert.image %> alt="/assets/soundboard.jpeg">
     <figcaption>
         <h3><%= concert.band %><span><%= concert.venue %> on <%= concert.date.strftime("%B %e") %> at <%=concert.start_time %></span></h3>
     </figcaption>
