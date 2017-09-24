@@ -1,0 +1,18 @@
+<% if @errors %>
+<ul>
+<% @errors.each do |error| %>
+  <li><%= error %></li>
+<% end %>
+</ul>
+<%end %>
+
+
+<%= form_tag sessions_path do %>
+
+  <%= label_tag :email %>
+  <%= email_field_tag :email %><br>
+
+  <%= label_tag :password %>
+  <%= password_field_tag :password %><br>
+  <%= submit_tag "login" %>
+<% end %>

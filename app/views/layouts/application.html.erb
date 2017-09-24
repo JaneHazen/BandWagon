@@ -9,9 +9,19 @@
   </head>
 
   <body>
-  <nav>
-  <a href="/">HOME!</a>
+  <% if logged_in? %>
+  <nav class="fixed-navbar">
+    <%= link_to "logout", session_path(current_user), :class => 'nav-bar', method: :delete %>
+    <%= link_to "home", root_path, :class => 'nav-bar' %>
   </nav>
+  <% else %>
+    <nav class="fixed-navbar">
+    <%= link_to "login", new_session_path, :class => 'nav-bar' %>
+    <%= link_to "register", new_user_path, :class => 'nav-bar' %>
+    <%= link_to "home", root_path, :class => 'nav-bar' %>
+  </nav>
+  <% end %>
+
     <%= yield %>
   </body>
 </html>
