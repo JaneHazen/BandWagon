@@ -1,0 +1,5 @@
+<% if person.id == current_user.id %>
+  <li><strong><%= person.first_name%> <%= person.last_name %> </strong></li>
+<%else %>
+  <li><%= person.first_name%> <%= person.last_name %> </li>
+<%end %>

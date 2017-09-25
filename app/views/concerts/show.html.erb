@@ -24,21 +24,19 @@
   <h3>Attending:</h3>
 
   <% if @concert.attendees.any? %>
-    <ul>
-      <%= @concert.attendees.each do |person| %>
-        <% if person.id == current_user.id %>
-          <li><strong><%= person.first_name%> <%= person.last_name %> </strong></li>
-        <%else %>
-          <li><%= person.first_name%> <%= person.last_name %> </li>
-        <%end %>
+    <ul class="add">
+      <% @concert.attendees.each do |person| %>
+        <%= render partial: 'shared/person', locals: {person: person} %>
+
+
       <% end %>
     </ul>
   <%else %>
     <p>Join the BandWagon!</p>
   <%end %>
-</div>
+</div class="attendancebutton">
     <% if @concert.attendees.exclude? @current_user %>
-     <%= render 'shared/new', locals: {attendance: @attendance}, remote: true, layout: false %>
+     <%= render 'shared/new', locals: {attendance: @attendance}, layout: false %>
      <% end %>
 <% else %>
 
@@ -47,7 +45,7 @@
   <h3>Attending:</h3>
     <% if @concert.attendees.any? %>
       <ul>
-      <%= @concert.attendees.each do |person| %>
+      <% @concert.attendees.each do |person| %>
 
           <li><%= person.first_name%> <%= person.last_name %> </li>
 

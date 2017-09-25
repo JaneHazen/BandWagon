@@ -4,16 +4,17 @@ class AttendancesController < ApplicationController
   end
 
   def create
+
     @attendance = Attendance.new(attendance_params)
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    current_user
     if @attendance.save
       respond_to do |format|
         format.html {redirect_to concert_path(@attendance.concert_id)}
-        format.js
+        format.js {}
       end
     else
       @errors = ["Oh no! Maybe you're not attending..."]
-      redirect_to
+      redirect_to concert_path
     end
   end
 

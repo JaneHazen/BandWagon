@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
+
+gem "jquery-slick-rails"
 gem 'bcrypt'
 
 group :development, :test do
@@ -25,6 +27,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'bootstrap-sass'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'better_errors'
+gem 'binding_of_caller'

@@ -5,16 +5,13 @@
 
 
 
-
-<% @concerts.each do |concert| %>
-
-  <figure class="snip1585">
-  <img src=<%= concert.image %> alt="/assets/soundboard.jpeg">
-    <figcaption>
-        <h3><%= concert.band %><span><%= concert.venue %> on <%= concert.date.strftime("%B %e") %> at <%=concert.start_time %></span></h3>
-    </figcaption>
-  <a href="/concerts/<%=concert.id%>"></a>
-  </figure>
-<% end %>
+    <% @concerts.each_with_index do |concert, idx| %>
+      <figure class="snip1585">
+        <%= link_to (image_tag(concert.image)), concert_path(concert) %>
+        <figcaption>
+            <h3><%= concert.band %><span><%= concert.venue %> on <%= concert.date.strftime("%B %e") %> at <%=concert.start_time %></span></h3>
+        </figcaption>
+      </figure>
+    <% end %>
 
 

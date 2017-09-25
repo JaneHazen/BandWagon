@@ -7,6 +7,6 @@ class ConcertsController < ApplicationController
   def show
     @concert = Concert.find(params[:id])
     @attendance = Attendance.new
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+    current_user
   end
 end

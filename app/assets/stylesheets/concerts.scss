@@ -153,3 +153,41 @@
 
 
 
+// #gallery {
+//   width: 250px;
+//   height: 100%;
+//   overflow-y: auto;
+//   overflow-x: hidden;
+//   transform: rotate(-90deg);
+//   transform-origin: right top;
+//   transform:rotate(-90deg) translateY(-250px);
+
+// }
+//   #gallery figure {
+//   width: 250px;
+//   height: 250px;
+//   transform: rotate(90deg);
+//   transform-origin: right top;
+//   }
+// @import 'slick';
+// @import 'slick-theme';
+// @import "bootstrap-sprockets";
+// @import "bootstrap";
+//   .scroller {
+//   div {
+//     text-align: center;
+//     font-size: 30px;
+//   }
+// }
+
+// .slick-prev::before, .slick-next::before {
+//   color: #000;
+// }
+
+// .slick-next {
+//   right: -5px;
+// }
+
+// .slick-prev {
+//   left: -5px;
+// }

@@ -1,0 +1,2 @@
+$('.add').append('<%= escape_javascript(render partial: 'shared/person', locals: {person: @attendance.attendee}) %>');
+$('.new_attendance').hide();

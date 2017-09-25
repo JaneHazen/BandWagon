@@ -23,19 +23,19 @@ ActiveRecord::Schema.define(version: 20170924081337) do
   end
 
   create_table "concerts", force: :cascade do |t|
-    t.string   "band"
-    t.string   "venue"
-    t.date     "date"
-    t.string   "start_time"
+    t.string   "band",       null: false
+    t.string   "venue",      null: false
+    t.date     "date",       null: false
+    t.string   "start_time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
+    t.string   "first_name",      null: false
+    t.string   "last_name",       null: false
+    t.string   "email",           null: false
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
