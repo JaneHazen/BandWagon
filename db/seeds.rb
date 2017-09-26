@@ -7,21 +7,21 @@ Attendance.destroy_all
 
 Concert.create(band: "Dou Wei", venue: "Strawberry Festival", date: Faker::Date.forward(rand(30)), start_time: "8:00PM", image: "http://jonathanwcampbell.com/blog/wp-content/uploads/2011/07/Dou-Wei-III.jpg")
 
-Concert.create(band: "Noname", venue: "NoName Bar", date:Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "https://pixel.nymag.com/imgs/daily/vulture/2016/10/27/27-noname.w1200.h630.jpg")
+Concert.create(band: "Noname", venue: "NoName Bar", date:Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "http://www.clashmusic.com/sites/default/files/field/image/Copy%20of%20_D__4786%20%284%29.jpg")
 
-Concert.create(band: "No Doubt", venue: "Hollywood Boulevard", date: Faker::Date.forward(rand(30)), start_time: "9:00PM", image: "https://www.punknews.org/images/bands/nodoubt-1432819638.jpg")
+Concert.create(band: "No Doubt", venue: "Hollywood Boulevard", date: Faker::Date.forward(rand(30)), start_time: "9:00PM", image: "http://www.lovemarks.com/wp-content/uploads/lovemark-no-doubt-standard-600x600.jpg")
 
-Concert.create(band: "Langhorne Slim", venue: "The Slowdown", date: Faker::Date.forward(rand(30)), start_time:"8:00PM", image: "https://i.ytimg.com/vi/7PvoXknn99E/maxresdefault.jpg")
+Concert.create(band: "Langhorne Slim", venue: "The Slowdown", date: Faker::Date.forward(rand(30)), start_time:"8:00PM", image: "http://www.rouxby.com/wp-content/uploads/2012/04/IMG_1865.jpg")
 
-Concert.create(band: "Freestyle Fellowship", venue: "Duffy's", date: Faker::Date.forward(rand(30)), start_time:"10:00PM", image: "http://s3.amazonaws.com/955dreams_BoD/live/Freestyle%20Fellowship/images/website_landing_1024.jpg")
+Concert.create(band: "Freestyle Fellowship", venue: "Duffy's", date: Faker::Date.forward(rand(30)), start_time:"10:00PM", image: "https://images1.laweekly.com/imager/having-already-influenced-every-rapper-you/u/original/4245708/freestyle_fellowship_by_trevor_traynor_1.jpg")
 
-Concert.create(band: "Cui Jian", venue: "The Square", date: Faker::Date.forward(rand(30)), start_time: "10:00AM", image: "http://www.processphilosophy.org/uploads/5/9/1/5/5915900/1906707.jpg" )
+Concert.create(band: "Cui Jian", venue: "The Square", date: Faker::Date.forward(rand(30)), start_time: "10:00AM", image: "http://www.sbs.com.au/news/sites/sbs.com.au.news/files/shorthand_images/cuijian.jpg" )
 
 Concert.create(band: "Esperanza Spalding", venue: "Yia Yia's", date: Faker::Date.forward(rand(30)), start_time: "8:00PM", image: "http://farm5.static.flickr.com/4039/4582764369_515876548a_o.jpg")
 
-Concert.create(band: "Rancid", venue: "The Bourbon", date: Faker::Date.forward(rand(30)), start_time: "9:00PM", image: "https://media.livenation.com/artists/41512/41512-show-66309.jpg?1374690550")
+Concert.create(band: "Rancid", venue: "The Bourbon", date: Faker::Date.forward(rand(30)), start_time: "9:00PM", image: "http://images1.fanpop.com/images/image_uploads/Rancid-rancid-911396_500_425.jpg")
 
-Concert.create(band: "Barenaked Ladies", venue: "Everywhere for Everyone", date: Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "http://images.wolfgangsvault.com/cvfeatures/barenakedladies-20130530.jpg")
+Concert.create(band: "Barenaked Ladies", venue: "Everywhere for Everyone", date: Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "https://i.ytimg.com/vi/8T64TLzoJps/hqdefault.jpg")
 
 Concert.create(band: "Bobby McFerrin", venue: "The Slowdown", date:Faker::Date.forward(rand(30)), start_time: "7:00PM", image: "https://diarrya.files.wordpress.com/2011/07/bobby-mcferrin.jpg")
 
@@ -29,11 +29,11 @@ Concert.create(band: "Conor Oberst", venue: "Saddlecreek", date: Faker::Date.for
 
 Concert.create(band: "Nice & Smooth", venue: "The Hot Mess", date: Faker::Date.forward(rand(30)), start_time: "9:00PM", image: "http://mp3red.me/cover/1287421-460x460/nice-smooth.jpg")
 
-Concert.create(band: "Zhou Yunpeng", venue: "Duffy's", date: Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "http://m13.mask9.com/sites/default/files/styles/l/public/imagepad/20140428/20140428150830-bce636e28d7b128ccdc44d6d71e47e194d3f05f8.38/people-singer-zhou-yunpeng-mask9.jpg")
+Concert.create(band: "Zhou Yunpeng", venue: "Duffy's", date: Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "http://www.chinoiresie.info/wp-content/uploads/2017/01/BOT09013_015.jpg")
 
-Concert.create(band: "Sturgill Simpson", venue: "The Bourbon", date: Faker::Date.forward(rand(30)), start_time: "7:00PM", image: "http://www.jeffersontheater.com/assets/img/sturgill-simpson-slide1.jpg")
+Concert.create(band: "Sturgill Simpson", venue: "The Bourbon", date: Faker::Date.forward(rand(30)), start_time: "7:00PM", image: "https://www.gossipcop.com/wp-content/uploads/2017/01/Sturgill-Simpson-Saturday-Night-Live.jpg")
 
-Concert.create(band: "Chance the Rapper", venue: "Duffy's", date: Faker::Date.forward(rand(30)), start_time: "8:00PM", image: "http://therockatbc.com/wp-content/uploads/2016/05/Chance_The_Rapper-Offical-Tumblr.jpg")
+Concert.create(band: "Chance the Rapper", venue: "Duffy's", date: Faker::Date.forward(rand(30)), start_time: "8:00PM", image: "http://cdn-img.essence.com/sites/default/files/styles/1x1_xs/public/1478018504/Chance-the-rapper.jpg?itok=NDEy1lbY")
 
 
 
