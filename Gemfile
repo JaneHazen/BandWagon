@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem "jquery-slick-rails"
 gem 'bcrypt'
+gem 'kaminari'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri

@@ -3,15 +3,16 @@
 
 </header>
 
-
-
-    <% @concerts.each_with_index do |concert, idx| %>
+    <% @concerts.each do |concert| %>
       <figure class="snip1585">
-        <%= link_to (image_tag(concert.image)), concert_path(concert) %>
+        <img src=<%= concert.image %></img>
         <figcaption>
             <h3><%= concert.band %><span><%= concert.venue %> on <%= concert.date.strftime("%B %e") %> at <%=concert.start_time %></span></h3>
         </figcaption>
+        <a href=<%=concert_path(concert)%>></a>
       </figure>
     <% end %>
 
+<%= paginate @concerts %>
+<%= page_entries_info @concerts %>
 

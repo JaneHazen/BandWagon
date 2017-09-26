@@ -1,12 +1,18 @@
 class ConcertsController < ApplicationController
   def index
-    @concerts = Concert.all
-    @concerts = @concerts.sort_by{|concert| concert.date}
+    p "*" * 100
+    p params
+    @concerts = Concert.page(params[:page]).per(6)
+    # @concerts = @concerts.sort_by{|concert| concert.date}
   end
 
   def show
     @concert = Concert.find(params[:id])
     @attendance = Attendance.new
     current_user
+  end
+
+  def concert_params
+    # params.
   end
 end
