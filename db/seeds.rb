@@ -19,9 +19,9 @@ Concert.create(band: "Cui Jian", venue: "The Square", date: Faker::Date.forward(
 
 Concert.create(band: "Esperanza Spalding", venue: "Yia Yia's", date: Faker::Date.forward(rand(30)), start_time: "8:00PM", image: "https://a1-images.myspacecdn.com/images04/2/4058018140634bb5be72bf7f150180e0/300x300.jpg")
 
-Concert.create(band: "Rancid", venue: "The Bourbon", date: Faker::Date.forward(rand(30)), start_time: "9:00PM", image: "http://images1.fanpop.com/images/image_uploads/Rancid-rancid-911396_500_425.jpg")
+Concert.create(band: "Rancid", venue: "The Bourbon", date: Faker::Date.forward(rand(30)), start_time: "9:00PM", image: "https://www.opiwiki.com/pic?w=6&f=109139&e=1&o=703")
 
-Concert.create(band: "Barenaked Ladies", venue: "Everywhere for Everyone", date: Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "https://i.ytimg.com/vi/8T64TLzoJps/hqdefault.jpg")
+Concert.create(band: "Barenaked Ladies", venue: "Everywhere for Everyone", date: Faker::Date.forward(rand(30)), start_time: "10:00PM", image: "http://cps-static.rovicorp.com/3/JPG_500/MI0001/682/MI0001682668.jpg?partner=allrovi.com")
 
 Concert.create(band: "Bobby McFerrin", venue: "The Slowdown", date:Faker::Date.forward(rand(30)), start_time: "7:00PM", image: "http://bobbymcferrin.com/images/press/CarolFriedman4.jpg")
 
