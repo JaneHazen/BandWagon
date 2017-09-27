@@ -24,13 +24,11 @@
   <h3>Attending:</h3>
 
   <% if @concert.attendees.any? %>
-    <ul class="add">
       <% @concert.attendees.each do |person| %>
         <%= render partial: 'shared/person', locals: {person: person} %>
 
 
       <% end %>
-    </ul>
   <%else %>
     <p>Join the BandWagon!</p>
   <%end %>
